@@ -48,6 +48,7 @@ public class DonorScreenController {
         BloodBankApplication.changeScene("donations-view.fxml");
     }
 
+    @FXML
     public void submitChangesButton(ActionEvent actionEvent) throws SQLException {
         String query = "UPDATE `Donors`" +
                 " SET Name = '" + Name.getText() + "', Age = '" + Age.getText() + "', Weight = '" + Weight.getText() +

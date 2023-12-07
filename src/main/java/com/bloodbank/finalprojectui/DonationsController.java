@@ -18,27 +18,27 @@ public class DonationsController {
     @FXML
     public void initialize() throws SQLException {
         TableColumn donationId = new TableColumn("ID");
-        donationId.setCellFactory(new PropertyValueFactory<>("id"));
+        donationId.setCellValueFactory(new PropertyValueFactory<>("id"));
         TableColumn donorId = new TableColumn("Donor ID");
-        donationId.setCellFactory(new PropertyValueFactory<>("donorId"));
+        donorId.setCellValueFactory(new PropertyValueFactory<>("donorId"));
         TableColumn date = new TableColumn("Donation Date");
-        donationId.setCellFactory(new PropertyValueFactory<>("donationDate"));
+        date.setCellValueFactory(new PropertyValueFactory<>("donationDate"));
         TableColumn employeeId = new TableColumn("Employee ID");
-        donationId.setCellFactory(new PropertyValueFactory<>("employeeId"));
-        TableColumn notes = new TableColumn("Notes");
-        donationId.setCellFactory(new PropertyValueFactory<>("notes"));
+        employeeId.setCellValueFactory(new PropertyValueFactory<>("employeeId"));
         TableColumn quantity = new TableColumn("Quantity");
-        donationId.setCellFactory(new PropertyValueFactory<>("quantity"));
+        quantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        TableColumn notes = new TableColumn("Notes");
+        notes.setCellValueFactory(new PropertyValueFactory<>("notes"));
 
-        donationsTable.getColumns().addAll(donationId, donorId, date, employeeId, notes, quantity);
+        donationsTable.getColumns().addAll(donationId, donorId, date, employeeId, quantity, notes);
 
         String query = "SELECT * FROM `Donations` WHERE DonorID = " + BloodBankApplication.getSelectedDonorId() + ";";
         ResultSet res = BloodBankApplication.getDatabase().fetch(query);
 
         while(res.next()) {
-
             Donation donation = new Donation(res.getString("ID"), res.getString("DonorID"),
                     res.getString("DonationDate"), res.getString("EmployeeID"), res.getString("Notes"), res.getString("Quantity"));
+            System.out.println(donation);
             donationsTable.getItems().add(donation);
         }
     }
