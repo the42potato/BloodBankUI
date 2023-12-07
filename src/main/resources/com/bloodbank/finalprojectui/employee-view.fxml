@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Separator?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.bloodbank.finalprojectui.EmployeeScreenController">
+    <GridPane alignment="CENTER" hgap="5" vgap="10">
+        <VBox spacing="5"
+                GridPane.columnIndex="0" GridPane.rowIndex="0"
+              GridPane.columnSpan="1" GridPane.rowSpan="1">
+            <Text text="Search" underline="true"/>
+            <Button text="Donation" onAction="#onSearchDonationButtonClick"/>
+            <Button text="Employee" onAction="#onSearchEmployeeButtonClick"/>
+            <Button text="Bank" onAction="#onSearchBankButtonClick" fx:id="bankSearchButton"/>
+            <Button text="Hospital" onAction="#onSearchHospitalButtonClick" fx:id="hospitalSearchButton"/>
+        </VBox>
+        <VBox  spacing="5"
+                GridPane.columnIndex="1" GridPane.rowIndex="0"
+              GridPane.columnSpan="1" GridPane.rowSpan="1">
+            <Text text="Add" underline="true"/>
+            <Button text="Donor" onAction="#onAddDonorButtonClick"/>
+            <Button text="Donation" onAction="#onAddDonationButtonClick"/>
+            <Button text="Donation Reception" onAction="#onAddRecievedDonationButtonClick" fx:id="addReceivedDonationButton"/>
+            <Button text="Employee" onAction="#onAddEmployeeButtonClick" fx:id="addEmployeeButton"/>
+            <Button text="Bank" onAction="#onAddBankButtonClick" fx:id="addBankButton"/>
+            <Button text="Hospital" onAction="#onAddHospitalButtonClick" fx:id="addHospitalButton"/>
+        </VBox>
+        <Button GridPane.columnIndex="0" GridPane.rowIndex="2"
+                GridPane.columnSpan="1" GridPane.rowSpan="1"
+                text="Back" onAction="#onBackButtonClick"/>
+        <Button GridPane.columnIndex="1" GridPane.rowIndex="2"
+                GridPane.columnSpan="1" GridPane.rowSpan="1"
+                text="Account" onAction="#onEditSelfButtonClick"/>
+    </GridPane>
+
+</VBox>
