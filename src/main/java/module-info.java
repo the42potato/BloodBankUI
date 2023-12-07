@@ -7,4 +7,6 @@ module com.bloodbank.finalprojectui {
 
     opens com.bloodbank.finalprojectui to javafx.fxml;
     exports com.bloodbank.finalprojectui;
+    opens com.bloodbank.finalprojectui.sql to javafx.fxml;
+    exports com.bloodbank.finalprojectui.sql;
 }
