@@ -9,7 +9,6 @@ public class SearchEmployeeController {
 
 
     public GridPane searchOptions;
-    public ComboBox donationDateValue;
     public TableView resultsTable;
     public TextField id;
     public TextField name;

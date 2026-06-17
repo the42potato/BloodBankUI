@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AddBankController {

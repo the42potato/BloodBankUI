@@ -13,7 +13,6 @@ public class SearchHospitalController {
     public TableView resultsTable;
     public GridPane searchOptions;
     public TextField id;
-    public TextField quantity;
     public TextField address;
     public TextField phoneNum;
     public Button searchButton;
